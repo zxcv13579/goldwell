@@ -1,0 +1,503 @@
+.section{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/kv_bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    position: relative;
+    @media screen and (max-width: 768px){
+        background-image: url('../images/m-kv_bg.jpg');
+        padding: 30px;
+        align-items: flex-start;
+    }
+    &__title{
+        position: absolute;
+        top: 50%;
+        left: 22%;
+        transform: translate(-50%,-50%);
+        z-index: 1;
+        pointer-events: none;
+        @media screen and (max-width: 768px){
+            position: static;
+            transform: none;
+            margin-top: 80px;
+            margin-left: 20px;
+        }
+    }
+    &__textImg{
+        width: 100%;
+        max-width: 468px;
+        @media screen and (max-width: 768px){
+            width: 70%;
+        }
+    }
+    &__h3{
+        letter-spacing: 2px;
+        color: white;
+        font-weight: bold;
+        font-size: 56px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        @media screen and (max-width: 768px){
+            font-size: 32px;
+        }
+    }
+    &__p{
+        letter-spacing: 2px;
+        color: white;
+        font-size: 32px;
+        &:nth-of-type(1){
+            margin-bottom: 10px;
+        }
+        @media screen and (max-width: 768px){
+            font-size: 20px;
+        }
+    }
+    &__center{
+        width: 100%;
+        max-width: 1200px;
+        position: relative;
+        cursor: pointer;
+        @media screen and (max-width: 768px){
+            margin-bottom: auto;
+            transform: translateX(3%);
+            position: absolute;
+            top: 44%;
+            width: 80%;
+        }
+    }
+    &__centerImg{
+        width: 100%;
+    }
+    &__play{
+        width: 100%;
+        max-width: 105px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        @media screen and (max-width: 768px){
+            width: 10%;
+        }
+    }
+    &__scroll{
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translate(-50%,0%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 768px){
+            bottom: 50px;
+        }
+    }
+    &__arrow{
+        width: 30px;
+        height: 30px;
+        transform: rotate(45deg);
+        border-right: 3px solid white;
+        border-bottom: 3px solid white;
+        @media screen and (max-width: 768px){
+            width: 20px;
+            height: 20px;   
+        }
+    }
+    &__text{
+        font-size: 20px;
+        color: white;
+        letter-spacing: 1px;
+        margin-top: 10px;
+        @media screen and (max-width: 768px){
+            font-size: 18px;
+        }
+    }
+}
+.commodity{
+    $this: &;
+    padding: 160px 300px 450px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    background-image: url('../images/bg1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @media screen and (max-width: 1440px){
+        padding: 160px 130px 450px 50px;
+    }
+    @media screen and (max-width: 1024px){
+        padding: 160px 30px 450px 50px;
+    }
+    @media screen and (max-width: 768px){
+        background-image: url('../images/m-bg1.jpg');
+        padding: 50px 30px 620px 30px;
+        justify-content: flex-start;
+    }
+    @media screen and (max-width: 375px){
+        padding: 50px 30px 420px 30px;
+    }
+    // &__box{
+    //     margin-right: 150px;
+    // }
+    &__h3{
+        letter-spacing: 2px;
+        color: white;
+        font-weight: bold;
+        font-size: 56px;
+        @media screen and (max-width: 375px){
+            font-size: 32px;
+            letter-spacing: 0;
+        }
+    }
+    &__p{
+        letter-spacing: 2px;
+        color: white;
+        font-size: 32px;
+        margin: 30px 0;
+        @media screen and (max-width: 375px){
+            font-size: 18px;
+            margin: 20px 0;
+        }
+    }
+    &__span{
+        font-weight: 100;
+    }
+    &__item{
+        margin-top: 50px;
+        width: 30%;
+        position: absolute;
+        top: 47%;
+        left: 60%;
+        @media screen and (max-width: 1024px){
+            width: 40%;
+            left: 56%;
+        }
+        @media screen and (max-width: 768px){
+            position: static;
+            margin: auto;
+            width: 90%;
+            margin-top: 30px;
+
+        }
+    }
+    &__itemImg{
+        width: 100%;
+        max-width: 765px;
+    }
+    &__more{
+        font-size: 20px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 1);
+        text-align: justify;
+        box-sizing: border-box;
+        padding: 15px 15px;
+        outline: 1px solid white;
+        cursor: pointer;
+        display: inline-block;
+        overflow: hidden;
+        transition: all .25s;
+        z-index: 1;
+        position: relative;
+        @media screen and (max-width: 375px){
+            padding: 10px 10px;
+            font-size: 18px;
+        }
+        &:before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all .25s;
+            transform: translateX(-100%);
+        }
+        &:hover{
+            color: black;
+            transition: all .25s;
+            &:before{
+                transform: translateX(0%);
+                transition: all .25s;
+            }
+        }
+    }
+}
+.activity{
+    $this: &;
+    padding: 90px 90px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    background-image: url('../images/bg2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media screen and (max-width: 1440px){
+        padding: 100px 50px;
+    }
+    @media screen and (max-width: 768px){
+        background-image: url('../images/m-bg2.jpg');
+        padding: 50px 30px;
+    }
+    &__note{
+        letter-spacing: 2px;
+        color: white;
+        font-size: 32px;
+        font-weight: 600;
+        @media screen and (max-width: 375px){
+            font-size: 20px;
+        }
+    }
+    &__h3{
+        letter-spacing: 2px;
+        color: white;
+        font-weight: bold;
+        font-size: 56px;
+        margin-top: 15px;
+        @media screen and (max-width: 375px){
+            font-size: 32px;
+            letter-spacing: 0;
+        }
+    }
+    &__p{
+        letter-spacing: 2px;
+        color: black;
+        font-size: 24px;
+        margin-top: 15px;
+        @media screen and (max-width: 768px){
+            font-size: 18px;
+        }
+    }
+    &__span{
+        color: black;
+    }
+    &__box{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__item{
+        text-align: left;
+    }
+    &__itemImg{
+        width: 100%;
+        max-width: 502px;
+        @media screen and (max-width: 1440px){
+            width: 60%;
+        }
+        @media screen and (max-width: 768px){
+            width: 90%;
+        }
+    }
+    &__more{
+        margin-top: 25px;
+        font-size: 20px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 1);
+        text-align: justify;
+        box-sizing: border-box;
+        padding: 15px 15px;
+        outline: 1px solid white;
+        cursor: pointer;
+        display: inline-block;
+        overflow: hidden;
+        transition: all .25s;
+        z-index: 1;
+        position: relative;
+        @media screen and (max-width: 375px){
+            padding: 10px 10px;
+            font-size: 18px;
+        }
+        &:before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all .25s;
+            transform: translateX(-100%);
+        }
+        &:hover{
+            color: black;
+            transition: all .25s;
+            &:before{
+                transform: translateX(0%);
+                transition: all .25s;
+            }
+        }
+    }
+}
+.equation{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 80px 0px;
+    position: relative;
+    background-image: url('../images/bg3.jpg');
+    // background-repeat: no-repeat;
+    background-position: center;
+    // background-size: cover;
+    @media screen and (max-width: 768px){
+        padding: 50px 30px;
+    }
+    &__titleBox{
+        text-align: center;
+    }
+    &__h3{
+        letter-spacing: 2px;
+        color: white;
+        font-weight: bold;
+        font-size: 56px;
+        @media screen and (max-width: 375px){
+            font-size: 32px;
+            letter-spacing: 0;
+        }
+    }
+    &__p{
+        letter-spacing: 2px;
+        color: black;
+        font-size: 24px;
+        margin-top: 15px;
+        @media screen and (max-width: 768px){
+            font-size: 18px;
+        }
+    }
+    &__span{
+        @media screen and (max-width: 768px){
+            display: block;
+            margin-top: 10px;
+            &:nth-child(1){
+                display: none;
+            }
+        }
+    }
+    &__container{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 80px;
+    }
+    &__item{
+        display: flex;
+    }
+    &__left{
+        width: 50%;
+    }
+    &__right{
+        width: 50%;
+        margin-top: 150px;
+        @media screen and (max-width: 768px){
+            margin-top: 40px;
+        }
+    }
+    &__img{
+        width: 100%;
+    }
+}
+.deep{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    &__left{
+        width: 50%;
+        @media screen and (max-width: 768px){
+            width: 100%;
+        }
+    }
+    &__leftImg{
+        width: 100%;
+    }
+    &__right{
+        width: 50%;
+        background-color: #4D3825;
+        box-sizing: border-box;
+        padding: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 768px){
+            width: 100%;
+            padding: 50px 30px;
+        }
+    }
+    &__textBox{
+        width: 100%;
+        margin: auto;
+    }
+    &__h3{
+        letter-spacing: 2px;
+        color: white;
+        font-weight: bold;
+        font-size: 36px;
+        @media screen and (max-width: 375px){
+            font-size: 32px;
+            letter-spacing: 0;
+        }
+    }
+    &__p{
+        letter-spacing: 2px;
+        color: white;
+        font-size: 24px;
+        margin: 30px 0px;
+        line-height: 28px;
+        text-align: justify;
+        @media screen and (max-width: 768px){
+            font-size: 18px;
+        }
+    }
+    &__more{
+        font-size: 20px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 1);
+        text-align: justify;
+        box-sizing: border-box;
+        padding: 15px 15px;
+        outline: 1px solid white;
+        cursor: pointer;
+        display: inline-block;
+        overflow: hidden;
+        transition: all .25s;
+        z-index: 1;
+        position: relative;
+        @media screen and (max-width: 375px){
+            padding: 10px 10px;
+            font-size: 18px;
+        }
+        &:before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all .25s;
+            transform: translateX(-100%);
+        }
+        &:hover{
+            color: black;
+            transition: all .25s;
+            &:before{
+                transform: translateX(0%);
+                transition: all .25s;
+            }
+        }
+    }
+}

@@ -1,0 +1,128 @@
+@charset "UTF-8";
+@import "compass/reset";
+// @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+*{
+	margin:0;
+	padding:0;
+	list-style: none;
+	font-family: 'Noto Sans TC','微軟正黑體';
+}
+img{
+	vertical-align: middle;
+}
+a{
+    text-decoration: none;
+}
+html{
+    font-family: 'Noto Sans TC','微軟正黑體';
+}
+.header{
+    $this: &;
+    width: 100%;
+    &__logo{
+        position: absolute;
+        top: 4%;
+        left: 2%;
+        z-index: 2;
+        @media screen and (max-width: 768px){
+            top: 2%;
+        }
+    }
+    &__logoImg{
+        width: 100%;
+        max-width: 122px;
+        @media screen and (max-width: 768px){
+            width: 70%;
+        }
+    }
+    &__lineBox{
+        width: 50px;
+        height: 30px;
+        position: fixed;
+        top: 2%;
+        right: 1%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 2;
+        &--active{
+            #{$this}__line{
+                &:nth-child(1){
+                    transform: translateY(13px) rotate(45deg);
+                    transition: all .3s;
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                    transition: all .3s;
+                }
+                &:nth-child(3){
+                    transform: translateY(-14px) rotate(-45deg);
+                    transition: all .3s;
+                }
+            }
+        }
+    }
+    &__line{
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        transition: all .3s;
+    }
+}
+
+.footer{
+    background-color: #85705B;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 768px){
+        padding: 20px;  
+    }
+    &__link{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 25px;
+    }
+    &__span{
+        width: 3px;
+        height: 30px;
+        display: block;
+        background-color: #C6CBC2;
+        margin-right: 10px;
+    }
+    &__fb,
+    &__yt,
+    &__ig{
+        margin-right: 10px
+    }
+    &__fbImg,
+    &__ytImg,
+    &__igImg{
+        width: 100%;
+        max-width: 30px;
+    }
+    &__a{
+        color: #C6BCB2;
+        margin-right: 10px;
+        font-size: 28px;
+        @media screen and (max-width: 768px){
+            font-size: 20px;    
+        }
+    }
+    &__tag{
+        color: #C6BCB2;
+        font-size: 22px;
+        font-weight: 700;
+        @media screen and (max-width: 768px){
+            font-size: 20px;    
+        }
+    }
+    &__text{
+        color: #C6BCB2;
+        font-size: 20px;
+    }
+}

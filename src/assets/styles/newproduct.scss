@@ -1,0 +1,347 @@
+.section{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/newproduct_kv_bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    position: relative;
+    @media screen and (max-width: 768px){
+        // background-image: url('../images/m-about_kv_bg.jpg');
+        padding: 30px;
+    }
+    &__scroll{
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translate(-50%,0%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 768px){
+            bottom: 50px;
+        }
+    }
+    &__arrow{
+        width: 30px;
+        height: 30px;
+        transform: rotate(45deg);
+        border-right: 3px solid white;
+        border-bottom: 3px solid white;
+        @media screen and (max-width: 768px){
+            width: 20px;
+            height: 20px;   
+        }
+    }
+    &__text{
+        font-size: 20px;
+        color: white;
+        letter-spacing: 1px;
+        margin-top: 10px;
+        @media screen and (max-width: 768px){
+            font-size: 18px;
+        }
+    }
+    &__titleBox{
+        margin-left: auto;
+        margin-right: 150px;
+    }
+    &__img{
+        width: 100%;
+        max-width: 500px;
+    }
+     &__h3{
+        letter-spacing: 2px;
+        color: black;
+        font-weight: bold;
+        font-size: 56px;
+        @media screen and (max-width: 375px){
+            font-size: 32px;
+            letter-spacing: 0;
+        }
+    }
+    &__p{
+        letter-spacing: 2px;
+        color: #771717;
+        font-size: 32px;
+        margin: 30px 0;
+        @media screen and (max-width: 375px){
+            font-size: 18px;
+            margin: 20px 0;
+        }
+    }
+    &__span{
+        font-weight: 100;
+    }
+    &__color{
+        color: black;
+        text-align: right;
+        font-size: 24px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+}
+.city{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 80px 0px;
+    position: relative;
+    background-image: url('../images/bg3.jpg');
+    background-position: center;
+    overflow: hidden;
+    &__first{
+        width: 90%;
+        margin: auto;
+        position: relative;
+    }
+    &__imgBox{
+        width: 80%;
+        @media screen and (max-width: 1024px){
+            width: 100%;
+        }
+    }
+    &__img{
+        width: 100%;
+    }
+    &__wrapper{
+        position: absolute;
+        top: 50%;
+        right: 0;        
+        transform: translateY(-50%);
+        background-color: rgba(255,255,255,.9);
+        box-sizing: border-box;
+        padding: 60px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 1024px){
+            padding: 40px 20px;
+            position: static;
+            transform: translateY(0%);
+        }
+    }
+    &__london{
+        width: 100%;
+        max-width: 526px;
+    }
+    &__h3{
+        letter-spacing: 2px;
+        color: #FC7A2E;
+        font-weight: bold;
+        font-size: 56px;
+        margin-bottom: 30px;
+        @media screen and (max-width: 768px){
+            letter-spacing: 0px;
+            font-size: 32px;
+        }
+    }
+    &__p{
+        margin: 10px 0px;
+        letter-spacing: 2px;
+        color: black;
+        font-size: 18px;
+        text-align: justify;
+        line-height: 20px;
+        @media screen and (max-width: 768px){
+            font-size: 16px;
+        }
+    }
+    &__shopBox{
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+        flex-direction: column;
+        @media screen and (max-width: 768px){
+            width: 90%;
+            margin: auto;
+        }
+    }
+    &__shopTitleBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__titleImg{
+        width: 100%;
+        max-width: 622px;
+    }
+    &__white{
+        color: white;
+    }
+    &__shopH3{
+        color: white;
+        margin-bottom: 0;
+    }
+    &__bold{
+        color: #771717;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 15px 0px;
+        line-height: 24px;
+        @media screen and (max-width: 768px){
+            font-size: 21px;
+        }
+    }
+    &__span{
+        text-decoration: underline;
+    }
+    &__note{
+        letter-spacing: 2px;
+        color: black;
+        font-size: 16px;
+        text-align: justify;
+        line-height: 18px;
+    }
+    &__note{
+        margin-bottom: 10px;
+    }
+    &__itemBox{
+        position: relative;
+        box-sizing: border-box;
+        padding: 150px 0px;
+        margin-top: 50px;
+    }
+    &__itemImg{
+        position: absolute;
+        width: 100%;
+        max-width: 500px;
+        @media screen and (max-width: 768px){
+            width: 80%;
+        }
+    }
+    &__center{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(1.1);
+        filter: blur(0px);
+        z-index: 3;
+    }
+    &__left{
+        top: 50%;
+        left: 67%;
+        transform: translate(-50%,-50%) scale(0.5);
+        filter: blur(5px);
+        z-index: 1;
+        @media screen and (max-width: 768px){
+            left: 90%;
+        }
+    }
+    &__right{
+        top: 50%;
+        left: 33%;
+        transform: translate(-50%,-50%) scale(0.5);
+        filter: blur(5px);
+        z-index: 1;
+        @media screen and (max-width: 768px){
+            left: 10%;
+        }
+    }
+    &__itemDetails{
+        display: flex;
+        justify-content: center;
+    }
+    &__itemDown{
+        margin-top: 20px;
+    }
+    &__itemOne{
+        color: black;
+        font-size: 32px;
+        font-weight: 600;
+        margin-right: 15px;
+        @media screen and (max-width: 768px){
+            font-size: 26px;
+        }
+    }
+    &__itemOther{
+        color: #771717;
+        font-size: 24px;
+        font-weight: 600;
+        margin-right: 15px;
+        @media screen and (max-width: 768px){
+            font-size: 22px;
+        }
+        &:before{
+            content: '';
+            width: 3px;
+            height: 20px;
+            background-color: #771717;
+            margin-right: 5px;
+            display: inline-block;
+        }
+    }
+    &__firstP{
+        margin-bottom: 10px;
+        line-height: 20px;
+    }
+}
+.global{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 80px 0px;
+    position: relative;
+    background-image: url('../images/bg3.jpg');
+    background-position: center;
+    overflow: hidden;
+    &__titleBox{
+        text-align: center;
+    }
+    &__h3{
+        letter-spacing: 2px;
+        color: white;
+        font-weight: bold;
+        font-size: 56px;
+        @media screen and (max-width: 375px){
+            font-size: 32px;
+            letter-spacing: 0;
+        }
+    }
+    &__container{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left{
+        width: 49%;
+        position: relative
+    }
+    &__right{
+        width: 49%;
+        margin-top: 100px;
+    }
+    &__img{
+        width: 100%;
+        max-width: 707px;
+    }
+    &__imgBox{
+        position: relative;
+    }
+    &__textBox{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(63,31,10,.8);
+        box-sizing: border-box;
+        padding: 30px 40px;
+    }
+    &__p{
+        letter-spacing: 2px;
+        color: white;
+        font-size: 18px;
+        line-height: 20px;
+        @media screen and (max-width: 375px){
+            font-size: 18px;
+            margin: 20px 0;
+        }
+    }
+}
